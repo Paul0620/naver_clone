@@ -20,14 +20,17 @@
 .logo {
   margin: 0;
   float: left;
-}
-
-.logo-link > .special_img {
   width: 415px;
   height: 160px;
 }
 
+.logo-link {
+}
+
 /* 검색바 */
+.search-bar {
+  float: left;
+}
 
 /* 서비스 링크 */
 .service-items {

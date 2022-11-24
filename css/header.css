@@ -1,11 +1,46 @@
-.header-wrap {
+/* 공통 */
+.title-inner-box,
+.nav-inner {
+  width: 1130px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
-.title {
-  color: blue;
+/* 타이틀 */
+.title-box {
+  border-bottom: 1px solid #e4e8eb;
 }
 
+.title-inner-box {
+  height: 160px;
+  position: relative;
+}
+
+/* 로고 */
+.logo {
+  margin: 0;
+  float: left;
+}
+
+.logo-link > .special_img {
+  width: 415px;
+  height: 160px;
+}
+
+/* 검색바 */
+
+/* 서비스 링크 */
+.service-items {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 네비게이션 바 */
 .nav {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  box-shadow: 0 1px 3px 0 rgba(0 0 0 / 12%);
+}
+
+.nav-inner {
+  height: 52px;
 }

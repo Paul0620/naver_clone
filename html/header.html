@@ -1,36 +1,46 @@
 <body>
-  <div class="title-box">
-    <div class="title-inner-box">
-      <h1 class="logo">
-        <a class="logo-link" href="/"></a>
-      </h1>
-      <div class="search-bar">
-        <input type="search" />
-        <button type="button">아이콘</button>
-      </div>
-      <div class="service-items">
-        <a class="service-link" href="/">
-          네이버를 시작페이지로
-          <img src="" alt="" />
+  <div class="header-area">
+    <h1 class="logo">
+      <a class="logo-link" href="/">
+        <span class="blind">네이버</span>
+      </a>
+    </h1>
+    <div class="search">
+      <form>
+        <div class="search-bar">
+          <input class="search-input" type="text" />
+          <button class="search-button" type="button">
+            <span class="blind">검색</span>
+            <span class="search-button-icon"></span>
+          </button>
+        </div>
+      </form>
+      <a href="#" class="search-keypad">
+        <sapn class="blind">한글키패드</sapn>
+        <i class="search-keypad-icon"></i>
+      </a>
+      <button class="dropdown-button" type="button">
+        <span class="blind">최근검색기록</span>
+        <i class="dropdown-button-icon"></i>
+      </button>
+    </div>
+    <ul class="service-area">
+      <li class="service-link">
+        <a class="service-set-home" href="/">네이버를 시작페이지로</a>
+      </li>
+      <li class="service-link"><i></i></li>
+      <li class="service-link">
+        <a href="/">
+          <span>쥬니어네이버</span>
+          <i class="service-jn"></i>
         </a>
-        <a class="service-link" href="/"> 쥬니어네이버 </a>
-        <a class="service-link" href="/"> 해피빈 </a>
-      </div>
-    </div>
+      </li>
+      <li class="service-link">
+        <a href="/">
+          <span>해피빈</span>
+          <i class="service-hb"></i>
+        </a>
+      </li>
+    </ul>
   </div>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="nav-link" href="/">ㅎㅇ</a>
-      <a class="nav-link" href="/">ㅎㅇ</a>
-      <a class="nav-link" href="/">ㅎㅇ</a>
-      <a class="nav-link" href="/">ㅎㅇ</a>
-      <a class="nav-link" href="/">ㅎㅇ</a>
-    </div>
-  </nav>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $(".nav").load("nav.html");
-    });
-  </script>
 </body>

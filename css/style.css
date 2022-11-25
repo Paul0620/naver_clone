@@ -1,6 +1,26 @@
 @charset "utf-8";
 
+/* 네이버 폰트 적용 */
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* 레이아웃 css */
 @import url("header.css");
+@import url("nav.css");
+
+body {
+  color: #666666;
+  font-family: "Nanum Brush Script";
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.header {
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.nav {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+}
 
 .container {
   height: 500px;
@@ -8,4 +28,30 @@
 
 .footer {
   height: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+/* clip-path를 활용하여 텍스트 숨기기 */
+.blind {
+  position: absolute;
+  clip: rect(0px, 0px, 0px, 0px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 아이콘 사용 설정 */
+.logo-link:before,
+.search-button-icon,
+.search-keypad-icon,
+.dropdown-button-icon,
+.service-set-home:after {
+  background-image: url(/img/icon-bg.png);
+  background-size: 457px;
+  background-repeat: no-repeat;
+  display: inline-block;
 }

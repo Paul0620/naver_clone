@@ -1,49 +1,148 @@
-/* 공통 */
-.title-inner-box,
-.nav-inner {
+/* 헤더 */
+.header-area {
   width: 1130px;
+  height: 160px;
   padding: 0 30px;
   margin: 0 auto;
-}
-
-/* 타이틀 */
-.title-box {
-  border-bottom: 1px solid #e4e8eb;
-}
-
-.title-inner-box {
-  height: 160px;
   position: relative;
 }
 
 /* 로고 */
 .logo {
   margin: 0;
-  float: left;
-  width: 415px;
-  height: 160px;
+  position: absolute;
+  left: 21px;
+  top: 50%;
+  margin-top: -32px;
 }
 
 .logo-link {
+  display: block;
+}
+
+.logo-link:before {
+  width: 222px;
+  height: 52px;
+  content: "";
+  background-position: 0 -158px;
 }
 
 /* 검색바 */
-.search-bar {
-  float: left;
+.search {
+  position: absolute;
+  left: 268px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* 서비스 링크 */
-.service-items {
+.search-bar {
+  border: 2px solid #19ce60;
+  width: 582px;
+}
+
+.search-input {
+  width: 444px;
+  height: 24px;
+  padding: 14px 15px;
+  border: none;
+  font-size: 18px;
+  list-style: 24px;
+  font-weight: bold;
+  outline: none;
+}
+
+.search-button {
+  background-color: #19ce60;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  border: none;
+  padding: 0;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-/* 네비게이션 바 */
-.nav {
-  box-shadow: 0 1px 3px 0 rgba(0 0 0 / 12%);
+.search-button-icon {
+  width: 22px;
+  height: 22px;
+  background-position: -420px 0px;
 }
 
-.nav-inner {
-  height: 52px;
+.search-keypad {
+  position: absolute;
+  top: 0;
+  right: 84px;
+  width: 36px;
+  height: 56px;
+  text-align: center;
+}
+
+.search-keypad-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 12px;
+  background-position: -420px -402px;
+}
+
+.dropdown-button {
+  position: absolute;
+  top: 0;
+  right: 64px;
+  width: 22px;
+  height: 56px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.dropdown-button-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 5px;
+  background-position: -408px -100px;
+  cursor: pointer;
+}
+
+/* 서비스 링크 */
+.service-area {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.service-link {
+  float: left;
+}
+
+.service-set-home {
+  text-decoration: none;
+}
+
+.service-set-home:hover {
+  text-decoration: underline;
+}
+
+.service-set-home:after {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-position: -310px -342px;
+  vertical-align: top;
+  margin-top: -3px;
+  margin-left: 3px;
+}
+
+.service-link > i {
+  float: left;
+  width: 1px;
+  height: 10px;
+  background-color: #e4e8eb;
+  margin: 3px 7px;
 }

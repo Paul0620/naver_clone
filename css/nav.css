@@ -1,0 +1,10 @@
+.nav-items {
+  height: 52px;
+  width: 1130px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  float: left;
+}

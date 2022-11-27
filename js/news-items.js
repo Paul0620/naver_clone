@@ -20,8 +20,10 @@ $(document).ready(function () {
           />
         </a>
         <div class="news-item-hover-box">
-          <button>구독</button>
-          <button>기사보기</button>
+          <div>
+            <button>구독</button>
+            <button>기사보기</button>
+          </div>
         </div>
       </li>
     `;

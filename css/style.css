@@ -6,7 +6,11 @@
 /* 레이아웃 css */
 @import url("header.css");
 @import url("nav.css");
+@import url("section.css");
+@import url("aside.css");
+@import url("footer.css");
 
+/* 태그 전역설정 */
 body {
   color: #666666;
   font-family: "Nanum Brush Script";
@@ -14,6 +18,13 @@ body {
   line-height: 20px;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 레이아웃 설정 */
 .header {
   border-bottom: 1px solid #e4e8eb;
 }
@@ -22,16 +33,32 @@ body {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 
-.container {
-  height: 500px;
+.main {
+  margin: 0 auto;
+  padding: 20px 30px;
+  width: 1130px;
+}
+
+.main:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.section {
+  float: left;
+  width: 750px;
+}
+
+.aside {
+  float: right;
+  width: 350px;
 }
 
 .footer {
-  height: 100px;
-}
-
-ul {
-  list-style: none;
+  clear: both;
+  background-color: #fafbfc;
+  border-top: 1px solid #e4e8eb;
 }
 
 /* clip-path를 활용하여 텍스트 숨기기 */

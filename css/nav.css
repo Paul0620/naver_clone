@@ -32,7 +32,6 @@
 
 .nav-item-basic > a,
 .nav-item-service > a {
-  text-decoration: none;
   font-size: 15px;
   font-weight: bold;
   line-height: 30px;
@@ -41,10 +40,6 @@
 
 .nav-item-basic > a {
   color: #03c75a;
-}
-
-.nav-item-service > a {
-  color: #000;
 }
 
 .more-service {

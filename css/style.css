@@ -10,7 +10,7 @@
 @import url("aside.css");
 @import url("footer.css");
 
-/* 태그 전역설정 */
+/* 전역 설정 */
 body {
   color: #666666;
   font-family: "Nanum Brush Script";
@@ -22,6 +22,11 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 /* 레이아웃 설정 */

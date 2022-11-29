@@ -57,7 +57,6 @@
   width: 56px;
   height: 56px;
   border: none;
-  padding: 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -66,25 +65,27 @@
 .search-button-icon {
   width: 22px;
   height: 22px;
-  background-position: -420px 0px;
+  background-position: -420px -24px;
+  margin-bottom: -3px;
 }
 
 .search-keypad {
   position: absolute;
   top: 0;
   right: 84px;
+  z-index: 400;
   width: 36px;
   height: 56px;
-  text-align: center;
 }
 
 .search-keypad-icon {
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 20px;
   height: 12px;
-  background-position: -420px -402px;
+  background-position: -398px -267px;
 }
 
 .dropdown-button {
@@ -93,32 +94,38 @@
   right: 64px;
   width: 22px;
   height: 56px;
-  border: none;
-  padding: 0;
-  background-color: transparent;
+  text-align: center;
 }
 
 .dropdown-button-icon {
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%;
   width: 10px;
   height: 5px;
-  background-position: -408px -100px;
-  cursor: pointer;
+  margin: -2px 0 0 -5px;
+  background-position: -158px -151px;
 }
 
 /* 서비스 링크 */
 .service-area {
   position: absolute;
   top: 12px;
-  right: 30px;
-  margin: 0;
-  padding: 0;
+  right: 27px;
 }
 
-.service-link {
+.service-area:after {
+  content: "";
+  display: table;
+  table-layout: fixed;
+  clear: both;
+}
+
+.service-set-home {
   float: left;
+  font-size: 11px;
+  line-height: 16px;
+  color: #404040;
 }
 
 .service-set-home:hover {
@@ -126,19 +133,52 @@
 }
 
 .service-set-home:after {
-  content: "";
+  display: inline-block;
   width: 26px;
   height: 26px;
-  background-position: -310px -342px;
+  background-position: -382px -213px;
   vertical-align: top;
-  margin-top: -3px;
-  margin-left: 3px;
+  content: "";
+  margin: -3px 0 0 3px;
 }
 
-.service-link > i {
+.service-area > i {
   float: left;
   width: 1px;
   height: 10px;
   background-color: #e4e8eb;
   margin: 3px 7px;
+}
+
+.service-jn {
+  float: left;
+  padding: 3px;
+  margin-right: 6px;
+}
+
+.service-jn-icon {
+  width: 60px;
+  height: 10px;
+  background-position: -264px -296px;
+  vertical-align: top;
+}
+
+.service-jn:hover > .service-jn-icon {
+  background-position: -326px -296px;
+}
+
+.service-hb {
+  float: left;
+  padding: 3px 3px 2px;
+}
+
+.service-hb-icon {
+  width: 34px;
+  height: 11px;
+  background-position: -365px -245px;
+  vertical-align: top;
+}
+
+.service-hb:hover > .service-hb-icon {
+  background-position: -380px -199px;
 }

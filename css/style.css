@@ -13,15 +13,11 @@
 /* 전역 설정 */
 body {
   color: #666666;
-  font-family: "Nanum Brush Script";
   font-size: 12px;
   line-height: 20px;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  min-width: 1190px;
+  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
+    helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
 a {
@@ -81,9 +77,28 @@ a {
 .search-button-icon,
 .search-keypad-icon,
 .dropdown-button-icon,
-.service-set-home:after {
+.service-set-home:after,
+.service-jn-icon,
+.service-hb-icon,
+.mail-icon,
+.shop-icon-01,
+.shop-icon-02,
+.tv-icon,
+.more-icon,
+.temp-icon,
+.emotion-icon-01:before,
+.emotion-icon-02:before,
+.link-issue-news > span:first-of-type:after,
+.link-special:before {
   background-image: url(/img/icon-bg.png);
-  background-size: 457px;
+  background-size: 442px 428px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.weather-icon {
+  background-image: url(/img/icon-weather-bg.png);
+  background-size: 215px 184px;
   background-repeat: no-repeat;
   display: inline-block;
 }

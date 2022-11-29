@@ -1,0 +1,21 @@
+.chart-area {
+  border-top: 1px solid #e4e8eb;
+}
+
+.chart-header {
+  padding-top: 24px;
+}
+
+.chart-header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.chart-header > a {
+  float: left;
+}
+
+.chart-header > span {
+  float: right;
+}

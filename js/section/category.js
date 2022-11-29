@@ -1,19 +1,19 @@
 // 메뉴
-const menuData = [
+var menuData = [
   { key: "entertainment", name: "엔터", bgColor: "#e65da0" },
   { key: "sports", name: "스포츠", bgColor: "#0147b5" },
-  { key: "car", name: "자동차", bgColor: "#4a94e1", widthSize: 95 },
-  { key: "webtoon", name: "웹툰", bgColor: "#66c971", widthSize: 95 },
-  { key: "economy", name: "경제", bgColor: "#35ae5e", widthSize: 95 },
-  { key: "subscribe", name: "추천,구독", bgColor: "#5290ff", widthSize: 95 },
-  { key: "recipe", name: "레시피", bgColor: "#ebaa00", widthSize: 95 },
+  { key: "car", name: "자동차", bgColor: "#4a94e1" },
+  { key: "webtoon", name: "웹툰", bgColor: "#66c971" },
+  { key: "economy", name: "경제", bgColor: "#35ae5e" },
+  { key: "subscribe", name: "추천,구독", bgColor: "#5290ff" },
+  { key: "recipe", name: "레시피", bgColor: "#ebaa00" },
   { key: "living", name: "리빙", bgColor: "#c08d31" },
   { key: "bookstore", name: "책방", bgColor: "#4a94e1" },
   { key: "fashionBeauty", name: "패션뷰티", bgColor: "#8449ca" },
 ];
 
-// hot 게시물
-const hotData = [
+// issue 게시물
+var issueData = [
   {
     isBig: true,
     name: "아무것도 하고 싶지 않아",
@@ -46,7 +46,8 @@ const hotData = [
   },
 ];
 
-const vedioData = [
+// 비디오 게시물
+var vedioData = [
   {
     category: "TV 예능",
     title: "‘백년의 약속’♪ 백 년을 못 잊을 바로 그 무대❤ TV CHOSUN 221123 방송",
@@ -55,12 +56,12 @@ const vedioData = [
   },
 ];
 
+// 메뉴바
 $(document).ready(function () {
-  let menuItems = $(".category-menu-items");
+  var menuItems = $(".category-menu-items");
 
   menuData.forEach(function (item) {
-    let menuName;
-    let withSize;
+    var menuName;
 
     if (item.key === "subscribe") {
       menuName = item.name.replace(",", "<span></span>");
@@ -68,16 +69,9 @@ $(document).ready(function () {
       menuName = item.name;
     }
 
-    if (item.widthSize) {
-      withSize = "<button style='width: " + item.widthSize + "px;' ";
-    } else {
-      withSize = "<button ";
-    }
-
-    let convertedItem =
+    var convertedItem =
       "<li class='category-menu-item'>" +
-      withSize +
-      "type='button'>" +
+      "<button type='button'>" +
       menuName +
       "</button>" +
       "</li>";
@@ -86,14 +80,37 @@ $(document).ready(function () {
   });
 });
 
-// $(document).ready(function () {
-//   let bigPost = $("issue-big-items");
-//   let smallPost = $("issue-small-items");
+// 비디오 목록
+$(document).ready(function () {
+  var vedioItems = $(".video-items");
 
-//   console.log(bigPost, smallPost);
+  for (var i = 0; i < 9; i++) {
+    var item =
+      "<li class='video-item'>" +
+      "<a href='#'>" +
+      "<div class='video-item-imgbox'>" +
+      "<img src='" +
+      vedioData[0].img +
+      "' alt='" +
+      vedioData[0].program +
+      "' />" +
+      "<i>icon</i>" +
+      "</div>" +
+      "<div class='video-item-textbox'>" +
+      "<div class='category'>TV 예능</div>" +
+      "<div class='title'>" +
+      vedioData[0].title +
+      "</div>" +
+      "<div class='provider'>" +
+      "<span>" +
+      vedioData[0].program +
+      "</span>" +
+      "<span>4일 전</span>" +
+      "</div>" +
+      "</div>" +
+      "</a>" +
+      "</li>";
 
-//   hotData.forEach(function (item) {
-//     if (item.isBig) {
-//     }
-//   });
-// });
+    vedioItems.append(item);
+  }
+});

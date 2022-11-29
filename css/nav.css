@@ -46,16 +46,251 @@
   margin-left: 17px;
 }
 
+.more-service:hover > a {
+  text-decoration: underline;
+}
+
 .more-service > a {
   font-size: 13px;
   font-weight: 400;
   color: #202020;
+  letter-spacing: 0;
+}
+
+.mail-icon {
+  width: 21px;
+  height: 21px;
+  background-position: -420px -73px;
+  vertical-align: top;
+  margin: 3px 9px 0 0;
+}
+
+.shop-icon-01 {
+  width: 24px;
+  height: 20px;
+  background-position: -76px -386px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.shop-icon-02 {
+  width: 54px;
+  height: 20px;
+  background-position: -209px -267px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.tv-icon {
+  width: 12px;
+  height: 14px;
+  background-position: -256px -212px;
+  margin: 9px 2px 0 0;
+  vertical-align: top;
+}
+
+.more-icon {
+  width: 11px;
+  height: 7px;
+  background-position: -402px -296px;
+  margin-left: 7px;
+  vertical-align: 2px;
 }
 
 /* 날씨 */
-.nav-weather {
+.weather-area {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   right: 30px;
+  max-width: 270px;
+  height: 52px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.weather-box {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+  touch-action: pan-x;
+  user-select: none;
+  -webkit-user-drag: none;
+  width: 270px;
+}
+
+.weather-box > div {
+  width: 100%;
+  height: 100%;
+  animation: slide 5s infinite 1.5s;
+}
+
+/* @keyframes slide {
+  from {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    transform: translate3d(0px, -52px, 0px);
+  }
+} */
+
+/* 대기 상태 */
+.weather-content-01 {
+  width: 270px;
+  position: absolute;
+  top: 0px;
+}
+
+.weather-content-01 > a {
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  padding: 17px 0 16px;
+  line-height: 18px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.weather-content-01:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.weather-content-01 > a > div:first-of-type,
+.weather-content-01 > a > div:nth-of-type(2) {
+  float: left;
+  color: #202020;
+}
+
+.emotion-icon-01,
+.emotion-icon-02 {
+  margin-left: 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.emotion-icon-01:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-position: -420px -246px;
+  vertical-align: top;
+  vertical-align: -4px;
+  margin-right: 6px;
+}
+
+.emotion-icon-02:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-position: -420px -266px;
+  vertical-align: top;
+  vertical-align: -4px;
+  margin-right: 6px;
+}
+
+.weather-content-01 > a > div:nth-of-type(2):before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #e4e8eb;
+  margin: 0 10px;
+  vertical-align: -1px;
+}
+
+/* 날씨 기온 */
+.weather-content-02 {
+  width: 270px;
+  position: absolute;
+  top: 52px;
+}
+
+.weather-content-02:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.weather-content-02 > a {
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 0 11px;
+  line-height: 29px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.weather-content-02:hover > a > .location {
+  text-decoration: underline;
+}
+
+.weather-icon {
+  float: left;
+  width: 29px;
+  height: 29px;
+  background-position: -62px 0;
+  margin-right: 9px;
+  vertical-align: top;
+}
+
+.current-weather {
+  float: left;
+  margin-right: 9px;
+}
+
+.current-weather > span {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.current-weather > span:last-of-type {
+  font-size: 13px;
+}
+
+.temp-box {
+  float: left;
+}
+
+.temp-box:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.temp-box > span {
+  float: left;
+  font-size: 13px;
+}
+
+.temp-box > span:first-of-type {
+  color: #2586ee;
+}
+
+.temp-icon {
+  width: 5px;
+  height: 11px;
+  background-position: -437px -182px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  content: "";
+  margin: 0 3px;
+  vertical-align: -1px;
+}
+
+.temp-box > span:last-of-type {
+  color: #e9564a;
+}
+
+.location {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  color: grey;
+  padding-left: 9px;
 }

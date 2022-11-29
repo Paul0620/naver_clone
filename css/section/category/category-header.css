@@ -1,0 +1,17 @@
+.category-header {
+  padding-bottom: 17px;
+}
+
+.category-header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.category-header-left {
+  float: left;
+}
+
+.category-header-right {
+  float: right;
+}

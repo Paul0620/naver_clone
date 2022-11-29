@@ -1,4 +1,4 @@
-const data = [
+var data = [
   {
     name: "프레시안",
     img: "https://s.pstatic.net/static/newsstand/2020/logo/light/0604/002.png",
@@ -6,9 +6,9 @@ const data = [
 ];
 
 $(document).ready(function () {
-  let newsItems = $(".news-items");
+  var newsItems = $(".news-items");
 
-  for (let i = 0; i < 23; i++) {
+  for (var i = 0; i < 23; i++) {
     // let item = `
     //   <li class="news-item">
     //     <a class="news-item-link" href="#">
@@ -29,7 +29,7 @@ $(document).ready(function () {
     //   </li>
     // `;
 
-    let item =
+    var item =
       "<li class='news-item'>\n" +
       "<a class='news-item-link' href='#'>\n" +
       "<img alt='" +

@@ -89,7 +89,12 @@ a {
 .emotion-icon-01:before,
 .emotion-icon-02:before,
 .link-issue-news > span:first-of-type:after,
-.link-special:before {
+.link-special:before,
+.news-link:before,
+.news-link:after,
+.list-icon,
+.selected > .thumb-icon,
+.setup-icon {
   background-image: url(/img/icon-bg.png);
   background-size: 442px 428px;
   background-repeat: no-repeat;

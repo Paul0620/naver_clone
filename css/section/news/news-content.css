@@ -1,0 +1,167 @@
+.news-content {
+  position: relative;
+  height: 260px;
+}
+
+.news-items:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 뉴스 박스 라인 */
+.news-content-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.news-content-line > i {
+  position: absolute;
+  background-color: #e4e8eb;
+  z-index: 1;
+}
+
+.vertical-bar-01,
+.vertical-bar-02,
+.vertical-bar-03,
+.vertical-bar-04,
+.vertical-bar-05,
+.vertical-bar-06,
+.vertical-bar-07 {
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+
+.vertical-bar-01 {
+  left: 0;
+}
+
+.vertical-bar-02 {
+  left: 124px;
+}
+
+.vertical-bar-03 {
+  left: 249px;
+}
+
+.vertical-bar-04 {
+  left: 374px;
+}
+
+.vertical-bar-05 {
+  left: 499px;
+}
+
+.vertical-bar-06 {
+  left: 624px;
+}
+
+.vertical-bar-07 {
+  right: 0;
+}
+
+.horizontal-bar-01,
+.horizontal-bar-02,
+.horizontal-bar-03,
+.horizontal-bar-04,
+.horizontal-bar-05 {
+  top: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.horizontal-bar-01 {
+  top: 0;
+}
+
+.horizontal-bar-02 {
+  top: 65px;
+}
+
+.horizontal-bar-03 {
+  top: 130px;
+}
+
+.horizontal-bar-04 {
+  top: 195px;
+}
+
+.horizontal-bar-05 {
+  top: 260px;
+}
+
+/* 뉴스 링크 아이템 */
+.news-items {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.news-item {
+  position: relative;
+  float: left;
+  width: 16.66%;
+  height: 65px;
+  text-align: center;
+}
+
+.news-item:hover > div {
+  display: block;
+}
+
+.news-item-link {
+  display: block;
+  height: 20px;
+  padding: 22.5px;
+}
+
+.news-item-link > img {
+  height: 20px;
+}
+
+.news-item-hover-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f7f9fa;
+  width: 100%;
+  text-align: center;
+}
+
+.news-item-hover-box > div {
+  display: inline-block;
+  padding: 19px 0 11px 0;
+}
+
+.news-item-hover-box > div:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.news-item-hover-button {
+  float: left;
+  padding: 7px 8px 5px;
+  background-color: #fff;
+  border: 1px solid #dae1e6;
+  font-size: 12px;
+  line-height: 16px;
+  color: #505050;
+  cursor: pointer;
+}
+
+.news-item-hover-button:last-of-type {
+  margin-left: -1px;
+}
+
+.news-item-hover-button:hover {
+  position: relative;
+  border-color: #bec8d8;
+}

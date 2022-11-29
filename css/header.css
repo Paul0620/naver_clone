@@ -78,6 +78,10 @@
   height: 56px;
 }
 
+.search-keypad:hover > i {
+  background-position: -376px -267px;
+}
+
 .search-keypad-icon {
   position: absolute;
   top: 50%;

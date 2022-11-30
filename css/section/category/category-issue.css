@@ -15,27 +15,59 @@
 
 .issue-big-item-imgbox {
   position: relative;
+  overflow: hidden;
   margin-bottom: 16px;
 }
 
+.issue-big-item-imgbox:hover > img,
+.issue-small-item-imgbox:hover > img {
+  transform: scale(1.04);
+}
+
 .issue-big-item-imgbox > img {
+  display: block;
   width: 364px;
 }
 
-.issue-big-item-imgbox > i {
+.issue-big-item-imgbox > i,
+.issue-small-item-imgbox > i {
   position: absolute;
-  bottom: 10px;
-  left: 0;
-  color: red;
-  font-size: 20px;
+  bottom: 9px;
+  left: 12px;
+  width: 24px;
+  height: 28px;
+  background-position: -246px -342px;
+  vertical-align: top;
+  z-index: 1;
 }
 
-.issue-big-item-imgbox > span {
+.play-time-box {
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
+  right: 10px;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+
+.play-time-box > span:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
   right: 0;
-  color: red;
-  font-size: 20px;
+  bottom: 0;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  background-color: #000;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: transparent;
+}
+
+.play-time-box > span:last-of-type {
+  position: relative;
+  z-index: 1;
+  line-height: 14px;
+  color: #fff;
 }
 
 .issue-big-item-textbox {
@@ -113,18 +145,17 @@
   position: relative;
   margin-right: 18px;
   height: 98px;
+  overflow: hidden;
 }
 
 .issue-small-item-imgbox > img {
+  display: block;
   width: 98px;
 }
 
 .issue-small-item-imgbox > i {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  color: red;
-  font-size: 20px;
+  bottom: 3px;
+  left: 6px;
 }
 
 .issue-small-item-textbox {

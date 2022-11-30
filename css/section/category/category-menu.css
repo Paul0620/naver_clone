@@ -1,5 +1,17 @@
 .category-menu {
-  padding-bottom: 4px;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 4px;
+}
+
+.category-menu:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #dae1e6;
 }
 
 .category-menu-items {
@@ -8,33 +20,188 @@
 }
 
 .category-menu-item {
+  position: relative;
   display: inline-block;
 }
 
-.category-menu-item:nth-of-type(3) > button,
-.category-menu-item:nth-of-type(4) > button,
-.category-menu-item:nth-of-type(5) > button,
-.category-menu-item:nth-of-type(6) > button,
-.category-menu-item:nth-of-type(7) > button {
-  width: 95px;
-}
-
 .category-menu-item > button {
-  background-color: #fff;
-  border-radius: 1px;
-  border: none;
-  border: 1px solid #dae1e6;
-  margin-right: -1px;
-  padding: 0;
-  width: 94px;
   font-size: 13px;
   line-height: 47px;
   font-weight: bold;
+  letter-spacing: -0.25px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  width: 94px;
+  border-right: 1px solid #dae1e6;
+}
+
+.category-menu-item:first-of-type > button,
+.category-menu-item:nth-of-type(9) > button {
+  width: 92px;
+}
+
+.category-menu-item:last-of-type > button {
+  width: 96px;
+}
+
+.category-menu-item > button > span {
+  width: 2px;
+  height: 2px;
+  display: inline-block;
+  margin: 0 2px;
+  background-color: rgba(32, 32, 32, 0.8);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: 4px;
+}
+
+.category-menu-item > .selected > span {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 호버시 폰트 색상 */
+.category-menu-item:first-of-type:hover > button {
+  color: #e65da0;
+}
+
+.category-menu-item:nth-of-type(2):hover > button {
+  color: #0147b5;
+}
+
+.category-menu-item:nth-of-type(3):hover > button {
+  color: #4a94e1;
+}
+
+.category-menu-item:nth-of-type(4):hover > button {
+  color: #66c971;
+}
+
+.category-menu-item:nth-of-type(5):hover > button {
+  color: #35ae5e;
+}
+
+.category-menu-item:nth-of-type(6):hover > button {
+  color: #5290ff;
+}
+
+.category-menu-item:nth-of-type(7):hover > button {
+  color: #ebaa00;
+}
+
+.category-menu-item:nth-of-type(8):hover > button {
+  color: #c08d31;
+}
+
+.category-menu-item:nth-of-type(9):hover > button {
+  color: #4a94e1;
+}
+
+.category-menu-item:last-of-type:hover > button {
+  color: #8449ca;
+}
+
+.category-menu-item:hover > .selected {
+  color: white !important;
+}
+
+/* 선택시 색상 */
+.category-menu-item > .selected {
+  color: white;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+}
+
+.category-menu-item:first-of-type > .selected {
+  background-color: #e65da0;
+  border-color: #e65da0;
+}
+
+.category-menu-item:nth-of-type(2) > .selected {
+  background-color: #0147b5;
+  border-color: #0147b5;
+}
+
+.category-menu-item:nth-of-type(3) > .selected {
+  background-color: #4a94e1;
+  border-color: #4a94e1;
+}
+
+.category-menu-item:nth-of-type(4) > .selected {
+  background-color: #66c971;
+  border-color: #66c971;
+}
+
+.category-menu-item:nth-of-type(5) > .selected {
+  background-color: #35ae5e;
+  border-color: #35ae5e;
+}
+
+.category-menu-item:nth-of-type(6) > .selected {
+  background-color: #5290ff;
+  border-color: #5290ff;
+}
+
+.category-menu-item:nth-of-type(7) > .selected {
+  background-color: #ebaa00;
+  border-color: #ebaa00;
+}
+
+.category-menu-item:nth-of-type(8) > .selected {
+  background-color: #c08d31;
+  border-color: #c08d31;
+}
+
+.category-menu-item:nth-of-type(9) > .selected {
+  background-color: #4a94e1;
+  border-color: #4a94e1;
+}
+
+.category-menu-item:last-of-type > .selected {
+  background-color: #8449ca;
+  border-color: #8449ca;
+}
+
+/* 이전, 다음 버튼 */
+.prev-small-button,
+.next-small-button {
+  position: absolute;
+  padding: 0;
+  border: none;
+  background-color: inherit;
   cursor: pointer;
 }
 
-.category-menu-item:hover > button {
-  border-color: #e65da0;
-  background-color: #e65da0;
-  color: white;
+.prev-small-button {
+  top: 6px;
+  left: -23px;
+  z-index: 1;
+}
+
+.prev-small-button:hover > .prev-small-button-icon {
+  background-position: -170px -342px;
+}
+
+.prev-small-button-icon {
+  width: 40px;
+  height: 40px;
+  background-position: -128px -342px;
+  vertical-align: top;
+}
+
+.next-small-button {
+  top: 6px;
+  right: -18px;
+  z-index: 1;
+}
+
+.next-small-button:hover > .next-small-button-icon {
+  background-position: -44px -342px;
+}
+
+.next-small-button-icon {
+  width: 40px;
+  height: 40px;
+  background-position: -86px -342px;
+  vertical-align: top;
 }

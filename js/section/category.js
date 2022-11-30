@@ -53,6 +53,19 @@ var vedioData = [
     title: "‘백년의 약속’♪ 백 년을 못 잊을 바로 그 무대❤ TV CHOSUN 221123 방송",
     program: "복덩이들고(GO)",
     img: "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fs.pstatic.net%2Ftvcast.phinf%2F20221124_49%2F1D55m_1669216012469b2qIM_JPEG%2FC202200138_3_202211230809151741.jpg%22&type=nf464_260",
+    playTime: "4:49",
+  },
+];
+
+// 차트 목록
+var musicData = [
+  {
+    rank: 1,
+    title: "Birthday",
+    singer: "Red Velvet (레드벨벳)",
+    album: "'The ReVe Festival 2022 - Birthday'",
+    img: "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fmusicmeta-phinf.pstatic.net%2Falbum%2F008%2F399%2F8399184.jpg%3Ftype%3Dr480Fll%26v%3D20221130101008%22&type=navermain_n96_96",
+    status: "up", // 'down'
   },
 ];
 
@@ -60,8 +73,9 @@ var vedioData = [
 $(document).ready(function () {
   var menuItems = $(".category-menu-items");
 
-  menuData.forEach(function (item) {
+  menuData.forEach(function (item, idx) {
     var menuName;
+    var selectItem;
 
     if (item.key === "subscribe") {
       menuName = item.name.replace(",", "<span></span>");
@@ -69,9 +83,15 @@ $(document).ready(function () {
       menuName = item.name;
     }
 
+    if (idx === 0) {
+      selectItem = "<button class='selected' type='button'>";
+    } else {
+      selectItem = "<button type='button'>";
+    }
+
     var convertedItem =
       "<li class='category-menu-item'>" +
-      "<button type='button'>" +
+      selectItem +
       menuName +
       "</button>" +
       "</li>";
@@ -94,7 +114,15 @@ $(document).ready(function () {
       "' alt='" +
       vedioData[0].program +
       "' />" +
-      "<i>icon</i>" +
+      "<i></i>" +
+      "<span class='play-time-box'>" +
+      "<span>재생시간</span>" +
+      "<span>" +
+      vedioData[0].playTime +
+      "</span>" +
+      "</span>" +
+      "<span class='thumb-cover'></span>" +
+      "<span class='thumb-line'></span>" +
       "</div>" +
       "<div class='video-item-textbox'>" +
       "<div class='category'>TV 예능</div>" +
@@ -112,5 +140,88 @@ $(document).ready(function () {
       "</li>";
 
     vedioItems.append(item);
+  }
+});
+
+// 차트
+$(document).ready(function () {
+  var chartContent = $(".chart-content");
+
+  for (var i = 1; i < 3; i++) {
+    var items = document.createElement("ol");
+    items.className = "chart-items items-0" + i;
+
+    chartContent.append(items);
+  }
+
+  for (var i = 1; i < 3; i++) {
+    var items = $(".items-0" + i);
+    var plus = 0;
+    var status;
+
+    if (i === 2) {
+      plus = 5;
+    }
+
+    for (var j = 1; j < 6; j++) {
+      var rank = plus + j;
+
+      if (rank === 5 || rank === 7 || rank === 10) {
+        status =
+          "<div class='status-up'>" +
+          "<i><span class='blind'>상승</span></i>" +
+          "</div>";
+      } else if (rank === 8) {
+        status =
+          "<div class='status-down'>" +
+          "<i><span class='blind'>하강</span></i>" +
+          "</div>";
+      } else {
+        status = "<div></div>";
+      }
+
+      var item =
+        "<li class='chart-item'>" +
+        "<div class='chart-rank'>" +
+        "<span>" +
+        rank +
+        "</span>" +
+        status +
+        "</div>" +
+        "<div class='chart-info'>" +
+        "<a class='chart-album' href='#'>" +
+        "<img src='" +
+        musicData[0].img +
+        "' alt='" +
+        musicData[0].title +
+        "' />" +
+        "<span class='thumb-line'></span>" +
+        "</a>" +
+        "<div>" +
+        "<a class='chart-title' href='#'>" +
+        musicData[0].title +
+        "</a>" +
+        "<span class='chart-description'>" +
+        "<a href='#'>" +
+        musicData[0].singer +
+        "</a>" +
+        "<a href='#'>" +
+        musicData[0].album +
+        "</a>" +
+        "</span>" +
+        "</div>" +
+        "</div>" +
+        "<div class='chart-play'>" +
+        "<a href='#'>" +
+        "<span class='blind'>재생</span>" +
+        "</a>" +
+        "<a href='#'>" +
+        "<span class='blind'>가사</span>" +
+        "</a>" +
+        "</div>" +
+        "</li>";
+
+      items.append(item);
+    }
   }
 });

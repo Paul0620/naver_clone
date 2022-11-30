@@ -37,6 +37,10 @@
   margin-right: 7px;
 }
 
+.news-header-left > a > span:last-of-type:hover {
+  text-decoration: underline;
+}
+
 .link-issue-news > span:first-of-type:after {
   position: absolute;
   top: 7px;

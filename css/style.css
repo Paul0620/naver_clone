@@ -25,6 +25,12 @@ a {
   color: #000;
 }
 
+img {
+  transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+    -webkit-transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  image-rendering: -webkit-optimize-contrast;
+}
+
 /* 레이아웃 설정 */
 .header {
   border-bottom: 1px solid #e4e8eb;
@@ -94,7 +100,22 @@ a {
 .news-link:after,
 .list-icon,
 .selected > .thumb-icon,
-.setup-icon {
+.setup-icon,
+.prev-button-icon,
+.next-button-icon,
+.category-header-right > a:before,
+.issue-big-item-imgbox > i,
+.issue-small-item-imgbox > i,
+.video-item-imgbox > i,
+.prev-small-button-icon,
+.next-small-button-icon,
+.prev-small-button:hover > .prev-small-button-icon,
+.next-small-button:hover > .next-small-button-icon,
+.chart-header > a:after,
+.chart-play > a:first-of-type:before,
+.chart-play > a:last-of-type:before,
+.status-up > i,
+.status-down > i {
   background-image: url(/img/icon-bg.png);
   background-size: 442px 428px;
   background-repeat: no-repeat;

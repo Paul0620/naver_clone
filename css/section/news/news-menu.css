@@ -2,7 +2,6 @@
   padding: 22px 0 16px;
   font-size: 14px;
   line-height: 18px;
-  letter-spacing: -0.2px;
 }
 
 .news-menu:after {
@@ -13,6 +12,7 @@
 
 .news-menu-left {
   float: left;
+  letter-spacing: -0.2px;
 }
 
 .news-menu-left:after {
@@ -55,6 +55,7 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+  letter-spacing: -0.2px;
 }
 
 .news-tab > button:first-of-type {

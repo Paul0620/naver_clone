@@ -4,17 +4,24 @@
   padding: 11px 18px;
 }
 
+.link-items:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .link-item {
-  display: inline-block;
+  float: left;
   font-size: 13px;
   line-height: 25px;
   font-weight: bold;
+  letter-spacing: -0.25px;
   margin-right: 28px;
 }
 
 .link-item:first-of-type {
-  padding-right: 17px;
-  margin-right: 16px;
+  padding-right: 16px;
+  margin-right: 17px;
   border-right: 1px solid #e4e8eb;
 }
 
@@ -22,10 +29,15 @@
   margin-right: 0;
 }
 
+.link-item > a {
+  display: block;
+  color: #404040;
+}
+
 .link-item:hover > a {
   text-decoration: underline;
 }
 
 .link-item-theme {
-  color: #e65da0;
+  color: #e65da0 !important;
 }

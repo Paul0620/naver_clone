@@ -109,13 +109,17 @@ img {
 .video-item-imgbox > i,
 .prev-small-button-icon,
 .next-small-button-icon,
-.prev-small-button:hover > .prev-small-button-icon,
-.next-small-button:hover > .next-small-button-icon,
 .chart-header > a:after,
 .chart-play > a:first-of-type:before,
 .chart-play > a:last-of-type:before,
 .status-up > i,
-.status-down > i {
+.status-down > i,
+.login-button > i,
+.login-find-info > i,
+.signup-button:before,
+.finance-info-03:before,
+.finance-prev-icon,
+.finance-next-icon {
   background-image: url(/img/icon-bg.png);
   background-size: 442px 428px;
   background-repeat: no-repeat;

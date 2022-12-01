@@ -5,10 +5,10 @@
 @import url(section/category.css);
 
 /* 광고 */
-.ad-area {
+.section-ad-area {
   height: 135px;
 }
 
-.ad-area > img {
+.section-ad-area > img {
   width: 750px;
 }

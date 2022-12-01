@@ -1,3 +1,254 @@
 .aside-area {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+}
 
+/* 로그인 */
+.login-area {
+  background-color: #f7f9fa;
+  padding: 16px 16px 12px 17px;
+  margin-bottom: 12px;
+  border: 1px solid #dae1e6;
+}
+
+.login-guide {
+  padding-left: 3px;
+  color: grey;
+  margin-bottom: 11px;
+}
+
+.login-button {
+  font-size: 13px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 14px;
+  background-color: #19ce60;
+  border: 1px solid #15c654;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+.login-button > i {
+  width: 60px;
+  height: 12px;
+  background-position: -202px -296px;
+  vertical-align: top;
+  margin: 2px 5px 0 0;
+}
+
+.login-sub-buttons {
+  padding: 0 8px 0 4px;
+  color: #404040;
+}
+
+.login-sub-buttons:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.login-find-info {
+  float: left;
+}
+
+.login-find-info > i {
+  width: 10px;
+  height: 14px;
+  background-position: -408px -55px;
+  vertical-align: top;
+  content: "";
+  margin: -1px 1px 1px;
+}
+
+.login-find-info > a {
+  color: #404040;
+}
+
+.login-find-info > a:hover {
+  text-decoration: underline;
+}
+
+.login-find-info > a:last-of-type {
+  position: relative;
+}
+
+.login-find-info > a:last-of-type:before {
+  display: inline-block;
+  background-color: #d7dce0;
+  width: 3px;
+  height: 3px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  vertical-align: top;
+  content: "";
+  margin: 0 5px 0 2px;
+  vertical-align: 3px;
+}
+
+.signup-button {
+  float: right;
+  position: relative;
+  color: #505050;
+}
+
+.signup-button:hover {
+  text-decoration: underline;
+}
+
+.signup-button:before {
+  width: 11px;
+  height: 11px;
+  background-position: -401px -245px;
+  content: "";
+  vertical-align: top;
+  margin: 2px 5px 0 0;
+}
+
+/* 증권 정보 */
+.finance-area {
+  position: relative;
+  height: 47px;
+  margin-bottom: 12px;
+  border: 1px solid #dae1e6;
+  line-height: 16px;
+}
+
+.finance-slide-info {
+  overflow: hidden;
+  padding-right: 67px;
+}
+
+.finance-slide-item {
+  position: absolute;
+  left: 0;
+  width: 281px;
+  overflow: hidden;
+}
+
+.finance-slide-item > a {
+  display: block;
+  padding: 14px 0 13px 16px;
+  overflow: hidden;
+}
+
+.finance-slide-item > a:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.finance-info-title {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: bold;
+  color: #202020;
+  float: left;
+  padding-top: 1px;
+}
+
+.finance-info-content {
+  float: left;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.finance-info-content:before {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  content: "";
+  margin: 3px 3px 2px 6px;
+  background-color: #e4e8eb;
+  vertical-align: top;
+}
+
+.finance-info-01 {
+  display: inline-block;
+  color: #505050;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.finance-info-02 {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 13px;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+.finance-info-03 {
+  display: inline-block;
+  font-size: 12px;
+  color: #f05a5a;
+  margin-left: 6px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.finance-info-03:before {
+  content: "";
+  width: 9px;
+  height: 6px;
+  background-position: -246px -204px;
+  vertical-align: top;
+  vertical-align: 2px;
+}
+
+.finance-slide-buttons {
+  position: absolute;
+  top: 11px;
+  right: 10px;
+}
+
+.finance-slide-buttons:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.finance-prev-button,
+.finance-next-button {
+  float: left;
+  background-color: #fff;
+  border: 1px solid #e4e8eb;
+  padding: 0;
+}
+
+.finance-next-button {
+  margin-left: -1px;
+}
+
+.finance-prev-icon {
+  width: 6px;
+  height: 9px;
+  background-position: -162px -327px;
+  vertical-align: top;
+  margin: 7px 8px 6px;
+}
+
+.finance-next-icon {
+  width: 6px;
+  height: 9px;
+  background-position: -146px -327px;
+  vertical-align: top;
+  margin: 7px 8px 6px;
+}
+
+.finance-prev-button:hover,
+.finance-next-button:hover {
+  background-color: #fafbfc;
+}
+
+.finance-prev-button:hover > .finance-prev-icon {
+  background-position: -154px -327px;
+}
+
+.finance-next-button:hover > .finance-next-icon {
+  background-position: -138px -327px;
 }

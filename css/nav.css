@@ -158,14 +158,28 @@
   clear: both;
 }
 
+.weather-content-01 > a > div {
+  color: #505050;
+}
+
 .weather-content-01 > a > div:first-of-type,
 .weather-content-01 > a > div:nth-of-type(2) {
   float: left;
+  letter-spacing: 0;
+}
+
+.weather-content-01 > a > div:last-of-type {
+  color: grey;
+  letter-spacing: -0.2px;
+}
+
+.weather-content-01 > a > div > span {
   color: #202020;
 }
 
 .emotion-icon-01,
 .emotion-icon-02 {
+  display: inline-block;
   margin-left: 7px;
   font-size: 13px;
   font-weight: bold;

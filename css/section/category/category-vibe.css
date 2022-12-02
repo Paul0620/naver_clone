@@ -1,0 +1,85 @@
+.vibe-area {
+  border-top: 1px solid #e4e8eb;
+}
+
+.vibe-header {
+  padding-top: 24px;
+}
+
+.vibe-header a {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  color: #000;
+}
+
+.vibe-header a:hover {
+  text-decoration: underline;
+}
+
+.vibe-header a:after {
+  content: "";
+  width: 7px;
+  height: 11px;
+  background-position: -408px -146px;
+  margin-left: 6px;
+  vertical-align: 0;
+}
+
+.vibe-content {
+  position: relative;
+}
+
+.vibe-items {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 17px 0 29px;
+}
+
+.vibe-item {
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  margin-right: 25px;
+}
+
+.vibe-item:last-of-type {
+  margin-right: 0;
+}
+
+.vibe-item .vibe-img-box {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.vibe-item .vibe-img-box img {
+  display: block;
+  width: 130px;
+}
+
+.vibe-text-box .title {
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 40px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 3px;
+}
+
+.vibe-text-box .description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  color: grey;
+}
+
+.vibe-content .prev-small-button,
+.vibe-content .next-small-button {
+  top: 68px;
+}

@@ -119,7 +119,8 @@ img {
 .signup-button:before,
 .finance-info-03:before,
 .finance-prev-icon,
-.finance-next-icon {
+.finance-next-icon,
+.vibe-header a:after {
   background-image: url(/img/icon-bg.png);
   background-size: 442px 428px;
   background-repeat: no-repeat;
@@ -129,6 +130,19 @@ img {
 .weather-icon {
   background-image: url(/img/icon-weather-bg.png);
   background-size: 215px 184px;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.shop-header-left a:before,
+.shop-header-left a:after,
+.shop-prev-icon,
+.shop-next-icon,
+.spcial-header-title .title-icon,
+.one-plus-icon,
+.spcial-img-box:last-of-type:before {
+  background-image: url(/img/shop-bg.png);
+  background-size: 129px 101px;
   background-repeat: no-repeat;
   display: inline-block;
 }

@@ -16,6 +16,9 @@
 /* 음악 차트 */
 @import url(./category/category-chart.css);
 
+/* VIBE */
+@import url(./category/category-vibe.css);
+
 .category-area {
   position: relative;
   padding-top: 35px;

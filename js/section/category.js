@@ -69,6 +69,15 @@ var musicData = [
   },
 ];
 
+// VIBE
+var vibeData = [
+  {
+    title: "New Release #120 : 보아, 지미 헨드릭스",
+    description: "2022.11.28",
+    img: "https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fmusic-phinf.pstatic.net%2F20221128_268%2F166961871726150irh_JPEG%2F%25C4%25BF%25B9%25F61.jpg%22&type=navermain_n260_260",
+  },
+];
+
 // 메뉴바
 $(document).ready(function () {
   var menuItems = $(".category-menu-items");
@@ -223,5 +232,34 @@ $(document).ready(function () {
 
       items.append(item);
     }
+  }
+});
+
+// VIBE
+$(document).ready(function () {
+  var vibeItems = $(".vibe-items");
+
+  for (var i = 0; i < 10; i++) {
+    var item =
+      "<li class='vibe-item'>" +
+      "<a href='#'>" +
+      "<div class='vibe-img-box'>" +
+      "<img src='" +
+      vibeData[0].img +
+      "' alt='앨범' />" +
+      "<span class='thumb-line'></span>" +
+      "</div>" +
+      "<div class='vibe-text-box'>" +
+      "<span class='title'>" +
+      vibeData[0].title +
+      "</span>" +
+      "<span class='description'>" +
+      vibeData[0].description +
+      "</span>" +
+      "</div>" +
+      "</a>" +
+      "</li>";
+
+    vibeItems.append(item);
   }
 });

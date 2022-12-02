@@ -120,7 +120,8 @@ img {
 .finance-info-03:before,
 .finance-prev-icon,
 .finance-next-icon,
-.vibe-header a:after {
+.vibe-header a:after,
+.footer-notice .notice-right:after {
   background-image: url(/img/icon-bg.png);
   background-size: 442px 428px;
   background-repeat: no-repeat;

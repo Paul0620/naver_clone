@@ -4,3 +4,124 @@
   margin: 0 auto;
   padding: 0 30px;
 }
+
+/* 광고 */
+.footer-ad {
+  overflow: hidden;
+  padding: 24px 0;
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.footer-ad:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ad-item {
+  float: left;
+  margin-right: 40px;
+}
+
+.ad-item:hover .ad-img {
+  transform: scale(1.04);
+}
+
+.ad-item:hover .title {
+  text-decoration: underline;
+}
+
+.ad-item:last-of-type {
+  margin-right: 0;
+}
+
+.ad-item:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.ad-item .ad-img-box {
+  float: left;
+  margin-right: 16px;
+  overflow: hidden;
+}
+
+.ad-item .ad-img {
+  display: block;
+  width: 160px;
+}
+
+.ad-item .ad-text-box {
+  float: left;
+  padding: 2px 2px 0 0;
+  width: 172px;
+}
+
+.ad-item .provider {
+  display: block;
+  overflow: hidden;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  color: #58c464;
+  white-space: nowrap;
+}
+
+.ad-item .title {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.26px;
+  color: #242424;
+  white-space: nowrap;
+}
+
+.ad-item .description-01,
+.ad-item .description-02 {
+  overflow: hidden;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #424242;
+  white-space: nowrap;
+}
+
+/* 공지사항 */
+.footer-notice {
+  overflow: hidden;
+  padding: 16px 0 15px;
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.footer-notice:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer-notice .notice-left {
+  float: left;
+  font-weight: 700;
+  color: #202020;
+}
+
+.footer-notice .notice-right {
+  float: right;
+  font-weight: 700;
+  color: #202020;
+}
+
+.footer-notice .notice-right:after {
+  content: "";
+  width: 8px;
+  height: 12px;
+  background-position: -408px -110px;
+  margin-left: 10px;
+  vertical-align: -2px;
+}
+
+.footer-notice .notice-left:hover,
+.footer-notice .notice-right:hover {
+  text-decoration: underline;
+}

@@ -1,8 +1,7 @@
 .footer-area {
   width: 1130px;
-  height: 268px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 30px 92px;
 }
 
 /* 광고 */
@@ -123,5 +122,187 @@
 
 .footer-notice .notice-left:hover,
 .footer-notice .notice-right:hover {
+  text-decoration: underline;
+}
+
+/* 협력 회사 */
+.footer-corp {
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.footer-corp:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.corp-left {
+  float: left;
+  width: 780px;
+  padding: 20px 0;
+}
+
+.corp-left-content {
+  margin-bottom: 9px;
+}
+
+.corp-left-content:last-of-type {
+  margin-bottom: 0;
+}
+
+.corp-left-content:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.corp-left-content .corp-title {
+  float: left;
+  width: 87px;
+  color: #202020;
+  font-weight: bold;
+}
+
+.corp-left-content a {
+  float: left;
+  color: #777;
+}
+
+.corp-left-content a:hover {
+  text-decoration: underline;
+}
+
+.corp-left-content a:first-of-type:before {
+  display: none;
+}
+
+.corp-left-content a:before {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 11px;
+  background-color: #e4e8eb;
+  vertical-align: -1px;
+  margin: 0 8px;
+}
+
+.corp-right {
+  float: right;
+  width: 350px;
+  padding: 28px 0;
+}
+
+.corp-right:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.corp-right .wale:after,
+.corp-right .project:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.corp-right .wale {
+  float: left;
+  margin-right: 50px;
+}
+
+.corp-right .project {
+  float: left;
+}
+
+.corp-right .text-box {
+  float: left;
+  margin-right: 12px;
+}
+
+.corp-right .text-box strong {
+  display: block;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.corp-right .text-box a {
+  display: block;
+  color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.corp-right .text-box a:hover {
+  text-decoration: underline;
+}
+
+.corp-right .img-box {
+  float: left;
+}
+
+.corp-right .img-box img {
+  width: 47px;
+  height: 50px;
+}
+
+/* 회사소개 */
+.footer-info {
+  padding-top: 25px;
+}
+
+.footer-info::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer-info .info-items {
+  float: left;
+  margin-right: 13px;
+}
+
+.footer-info .info-items:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer-info .info-item {
+  float: left;
+}
+
+.footer-info .info-item a {
+  color: #777;
+}
+
+.footer-info .info-item:first-of-type:before {
+  display: none;
+}
+
+.footer-info .info-item:before {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 11px;
+  background-color: #e4e8eb;
+  vertical-align: -1px;
+  margin: 0 8px;
+}
+
+.footer-info .info-item:hover a {
+  text-decoration: underline;
+}
+
+.footer-info .info-naver {
+  float: left;
+  font-weight: bold;
+}
+
+.footer-info .info-naver:hover {
   text-decoration: underline;
 }

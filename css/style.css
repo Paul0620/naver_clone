@@ -33,6 +33,7 @@ img {
 
 /* 레이아웃 설정 */
 .header {
+  position: relative;
   border-bottom: 1px solid #e4e8eb;
 }
 
@@ -66,6 +67,24 @@ img {
   clear: both;
   background-color: #fafbfc;
   border-top: 1px solid #e4e8eb;
+}
+
+/* 헤더 fixed시 */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  animation: ani_dropdown 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  z-index: 1000;
+}
+
+.nav-none {
+  display: none;
+}
+
+.main-mt {
+  margin-top: 213px;
 }
 
 /* clip-path를 활용하여 텍스트 숨기기 */

@@ -4,7 +4,6 @@
   height: 160px;
   padding: 0 30px;
   margin: 0 auto;
-  position: relative;
 }
 
 /* 로고 */
@@ -185,4 +184,11 @@
 
 .service-hb:hover > .service-hb-icon {
   background-position: -380px -199px;
+}
+
+/* 고정 헤더 */
+.fixed-header .header-area {
+  height: 64px;
+  background-color: #fff;
+  border-color: #10ce72;
 }

@@ -24,3 +24,29 @@
   padding-top: 35px;
   padding-bottom: 27px;
 }
+
+.more-wrap {
+  position: relative;
+  padding-top: 18px;
+  margin-bottom: 42px;
+  border-bottom: 1px solid #e4e8eb;
+}
+
+.more-wrap button {
+  position: absolute;
+  top: 0;
+  left: 334px;
+  color: #505050;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0;
+  border: 0;
+}
+
+.more-wrap .more-wrap-icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  background-position: 0 -342px;
+  margin: 0 auto 3px;
+}

@@ -1,5 +1,6 @@
 /* 헤더 */
 .header-area {
+  position: relative;
   width: 1130px;
   height: 160px;
   padding: 0 30px;
@@ -8,8 +9,8 @@
 
 /* 로고 */
 .logo {
-  margin: 0;
   position: absolute;
+  margin: 0;
   left: 21px;
   top: 50%;
   margin-top: -32px;
@@ -48,6 +49,10 @@
   list-style: 24px;
   font-weight: bold;
   outline: none;
+}
+
+.search-input::placeholder {
+  color: transparent;
 }
 
 .search-button {
@@ -189,6 +194,79 @@
 /* 고정 헤더 */
 .fixed-header .header-area {
   height: 64px;
-  background-color: #fff;
-  border-color: #10ce72;
+}
+
+.fixed-header .service-area {
+  display: none;
+}
+
+.fixed-header .logo {
+  left: 13px;
+  z-index: 1;
+}
+
+.fixed-header .logo-link:before {
+  width: 22px;
+  height: 22px;
+  background-position: -420px 0;
+  vertical-align: top;
+  margin: 21px 19px 20px 19px;
+}
+
+.fixed-header .search {
+  left: 73px;
+}
+
+.fixed-header .search:before {
+  position: absolute;
+  top: 22px;
+  bottom: 23px;
+  left: -1px;
+  content: "";
+  width: 1px;
+  background-color: #e8ecee;
+  height: 20px;
+}
+
+.fixed-header .search-bar {
+  width: 721px;
+  height: 60px;
+  margin-top: 3px;
+  border: 1px solid transparent !important;
+}
+
+.fixed-header .search-input {
+  font-size: 21px;
+  width: 584px;
+  margin: 1px;
+  letter-spacing: -0.4px;
+  transform: translate(-1px, 1px);
+}
+
+.fixed-header .search-input::placeholder {
+  color: grey;
+  opacity: 0.3;
+  font-weight: 400;
+}
+
+.fixed-header .search-keypad {
+  height: 65px;
+  transform: translateX(10px);
+}
+
+.fixed-header .dropdown-button {
+  height: 65px;
+  transform: translateX(12px);
+}
+
+.fixed-header .search-button {
+  background-color: inherit;
+  height: 65px;
+}
+
+.fixed-header .search-button-icon {
+  width: 24px;
+  height: 24px;
+  transform: translateX(-4px);
+  background-position: -327px -342px;
 }

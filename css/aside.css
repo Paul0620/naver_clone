@@ -1,11 +1,9 @@
 .aside-area {
-  position: relative;
   width: 350px;
   background-color: #fff;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: -0.2px;
-  transition: bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .aside-fixed {
@@ -923,16 +921,4 @@
 
 .spcial-text-box .percent {
   color: #f04045;
-}
-
-/* 스크롤 이벤트 처리 */
-
-.fixed-top-aside .aside-area {
-  position: fixed;
-  margin-top: 20px;
-}
-
-.stop-aside .aside-area {
-  position: absolute;
-  top: auto;
 }

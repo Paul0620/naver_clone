@@ -4,10 +4,28 @@
   border-width: 1px 0px;
 }
 
-.news-content > div {
+.news-content-innerbox {
   height: 260px;
   border: 1px solid #dae1e6;
   border-width: 0 1px;
+  overflow: hidden;
+}
+
+.news-content-innerbox:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.news-items {
+  float: left;
+  width: 100%;
+}
+
+.news-items-2,
+.news-items-3,
+.news-items-4 {
+  display: none;
 }
 
 .news-items:after {
@@ -82,7 +100,6 @@
 }
 
 /* 뉴스 링크 아이템 */
-
 .news-item {
   position: relative;
   float: left;

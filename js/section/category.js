@@ -158,13 +158,13 @@ $(document).ready(function () {
 
   for (var i = 1; i < 3; i++) {
     var items = document.createElement("ol");
-    items.className = "chart-items items-0" + i;
+    items.className = "chart-items items-" + i;
 
     chartContent.append(items);
   }
 
   for (var i = 1; i < 3; i++) {
-    var items = $(".items-0" + i);
+    var items = $(".items-" + i);
     var plus = 0;
     var status;
 

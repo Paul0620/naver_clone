@@ -1,3 +1,5 @@
+// 코드 정리 다시 해야함!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 // 스크롤 값 240 - header fixed 검색바로 변환
 $(window).scroll(function () {
   var scroll = $(window).scrollTop();
@@ -48,22 +50,6 @@ $(window).scroll(function () {
     7. 
   */
 
-  console.log(startScroll);
-
-  // 최상단일 때
-  if (scrollTop === 0) {
-    $(".aside").removeClass("fixed-bottom");
-    $(".aside").removeClass("fixed-top");
-    $(".aside").removeClass("absolute-aside");
-    $(".aside").removeClass("stop-aside");
-    $(".aside .aside-area")
-      .css("position", "relative")
-      .css("top", "auto")
-      .css("bottom", "auto")
-      .css("margin-top", "0");
-    startScroll = false;
-  }
-
   // 스크롤 내릴 때
   if (lastScrollTop < scrollTop) {
     // 처음 스크롤을 내릴 때 사이드바 끝에 도달한다면
@@ -91,44 +77,58 @@ $(window).scroll(function () {
       saveAsideTop = currentAsideTop;
     }
 
-    // if (
-    //   scrollBottom - asidePostionBtm >= asideBottomValue &&
-    //   startScroll &&
-    //   $(".aside").hasClass("absolute-aside")
-    // ) {
-    //   $(".aside").removeClass("absolute-aside");
+    // 사이드바 탑을 찍었다가 다시 내려올 때
+    if ($(".aside").hasClass("fixed-top") && startScroll) {
+      $(".aside").removeClass("fixed-top");
 
-    //   $(".aside").addClass("fixed-bottom");
-    //   $(".fixed-bottom .aside-area")
-    //     .css("position", "fixed")
-    //     .css("top", "auto")
-    //     .css("bottom", saveAsideBottom + "px")
-    //     .css("transition", "bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)");
-    // }
+      $(".aside").addClass("absolute-aside");
+      $(".absolute-aside .aside-area")
+        .css("position", "absolute")
+        .css("top", currentAsideTop - 212 + "px")
+        .css("bottom", "auto")
+        .css("margin-top", "0")
+        .css("transition", "none");
+      saveAsideBottom = currentAsideBottom;
+    }
 
-    // if ($(".aside").hasClass("fixed-top")) {
-    //   $(".aside").removeClass("fixed-top");
+    // 중간에 사이드바가 고정된 상태에서 바텀에 도달했을 때
+    if (
+      scrollBottom >= saveAsideBottom + asidePostionBtm &&
+      startScroll &&
+      $(".aside").hasClass("absolute-aside")
+    ) {
+      $(".aside").removeClass("absolute-aside");
 
-    //   $(".aside").addClass("absolute-aside");
-    //   $(".absolute-aside .aside-area")
-    //     .css("position", "absolute")
-    //     .css("top", currentAsideTop - 212 + "px")
-    //     .css("bottom", "auto")
-    //     .css("margin-top", "0")
-    //     .css("transition", "none");
-    // }
+      $(".aside").addClass("fixed-bottom");
+      $(".fixed-bottom .aside-area")
+        .css("position", "fixed")
+        .css("top", "auto")
+        .css("bottom", asidePostionBtm + "px")
+        .css("transition", "bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1)");
+    }
   } else {
     // 스크롤 올릴 때
-    // if ($(".aside").hasClass("fixed-bottom")) {
-    //   $(".aside").removeClass("fixed-bottom");
-    //   $(".aside").addClass("absolute-aside");
-    //   $(".absolute-aside .aside-area")
-    //     .css("position", "absolute")
-    //     .css("top", currentAsideTop - 212 + "px")
-    //     .css("bottom", "auto")
-    //     .css("margin-top", "0")
-    //     .css("transition", "none");
-    // }
+    // 맨 위까지 도달했을 떄
+    if (
+      (asideTopValue >= scrollTop + asidePositionTop + mainPt &&
+        $(".aside").hasClass("fixed-top") &&
+        startScroll) ||
+      scrollTop === 0
+    ) {
+      $(".aside").removeClass("fixed-bottom");
+      $(".aside").removeClass("fixed-top");
+      $(".aside").removeClass("absolute-aside");
+      $(".aside").removeClass("stop-aside");
+
+      $(".aside .aside-area")
+        .css("position", "relative")
+        .css("top", "auto")
+        .css("bottom", "auto")
+        .css("margin-top", "0");
+      startScroll = false;
+    }
+
+    // 맨 아래까지 갔다가 올라갈 때
     if (
       scrollTop <= saveAsideTop - asidePositionTop &&
       startScroll &&
@@ -144,33 +144,37 @@ $(window).scroll(function () {
         .css("margin-top", "20px");
       saveAsideTop = currentAsideTop;
     }
+
+    // 사이드바 바텀이 고정된 상태에서 끝까지 안내리고 다시 스크롤을 올릴 떄
+    if ($(".aside").hasClass("fixed-bottom") && startScroll) {
+      $(".aside").removeClass("fixed-bottom");
+
+      $(".aside").addClass("absolute-aside");
+      $(".absolute-aside .aside-area")
+        .css("position", "absolute")
+        .css("top", currentAsideTop - 212 + "px")
+        .css("bottom", "auto")
+        .css("margin-top", "0")
+        .css("transition", "none");
+      saveAsideTop = currentAsideTop;
+      saveAsideBottom = currentAsideBottom;
+    }
+
+    // 중간에 사이드바가 고정된 상태에서 사이드바 위로 올라왔을 때
     if (
-      asideTopValue >= scrollTop + asidePositionTop + mainPt &&
-      $(".aside").hasClass("fixed-top") &&
+      scrollTop <= saveAsideTop - asidePositionTop - mainPt &&
+      $(".aside").hasClass("absolute-aside") &&
       startScroll
     ) {
-      $(".aside").removeClass("fixed-top");
+      $(".aside").removeClass("absolute-aside");
 
-      $(".aside .aside-area")
-        .css("position", "relative")
-        .css("top", "auto")
+      $(".aside").addClass("fixed-top");
+      $(".fixed-top .aside-area")
+        .css("position", "fixed")
+        .css("top", asidePositionTop + "px")
         .css("bottom", "auto")
-        .css("margin-top", "0");
+        .css("margin-top", "20px");
     }
-    // if (
-    //   scrollTop + asidePositionTop <= saveAsideTop &&
-    //   $(".aside").hasClass("absolute-aside")
-    // ) {
-    //   $(".aside").removeClass("absolute-aside");
-    //   $(".aside").addClass("fixed-top");
-    //   $(".fixed-top .aside-area")
-    //     .css("position", "fixed")
-    //     .css("top", asidePositionTop + "px")
-    //     .css("bottom", "auto")
-    //     .css("margin-top", "20px");
-    //   saveAsideTop = currentAsideTop;
-    //   saveAsideBottom = currentAsideBottom;
-    // }
   }
 
   lastScrollTop = scrollTop;

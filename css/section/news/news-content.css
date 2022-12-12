@@ -168,6 +168,7 @@
 }
 
 .prev-button {
+  display: none;
   top: 110px;
   left: -27px;
   z-index: 100;

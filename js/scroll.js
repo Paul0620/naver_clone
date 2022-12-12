@@ -174,6 +174,7 @@ $(window).scroll(function () {
         .css("top", asidePositionTop + "px")
         .css("bottom", "auto")
         .css("margin-top", "20px");
+      saveAsideTop = currentAsideTop;
     }
   }
 

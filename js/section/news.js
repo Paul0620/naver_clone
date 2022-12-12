@@ -52,15 +52,50 @@ $(document).ready(function () {
 });
 
 // 페이지 전환
-var contentNumber = 1;
-var totalContent = $(".news-items").length;
+var contents = $(".news-items");
+var contentsLength = contents.length;
+var currentNumber = 1;
 
-function nextContent() {
-  if (totalContent === contentNumber) {
+$(".news-event-button").on("click", function (event) {
+  var type =
+    event.target.className.split(" ")[
+      event.target.className.split(" ").length - 1
+    ];
+
+  if (currentNumber === 1) {
+    $(".prev-button").hide();
     return;
+  } else {
+    $(".prev-button").show();
   }
 
-  $(".news-items-" + contentNumber).hide();
-  contentNumber += 1;
-  $(".news-items-" + contentNumber).show();
-}
+  if (currentNumber === 4) {
+    $(".next-button").hide();
+    return;
+  } else {
+    $(".next-button").show();
+  }
+
+  if (type === "next") {
+    var currentItem =
+      contents[currentNumber - 1].className.split(" ")[
+        contents[currentNumber - 1].className.split(" ").length - 1
+      ];
+    var nextItem =
+      contents[currentNumber].className.split(" ")[
+        contents[currentNumber].className.split(" ").length - 1
+      ];
+
+    console.log(currentItem, nextItem);
+
+    $(`${currentItem}`).hide();
+    $(`${nextItem}`).show();
+    currentNumber += 1;
+  }
+
+  if (type === "prev") {
+    // contents[currentNumber].hide();
+    // contents[currentNumber - 1].show();
+    // currentNumber -= 1;
+  }
+});

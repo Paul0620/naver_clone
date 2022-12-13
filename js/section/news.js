@@ -62,21 +62,25 @@ $(".news-event-button").on("click", function (event) {
       event.target.className.split(" ").length - 1
     ];
 
-  if (currentNumber === 1) {
-    $(".prev-button").hide();
-    return;
-  } else {
-    $(".prev-button").show();
+  //  이전 버튼
+  if (type === "prev") {
+    if (currentNumber === 1) return;
+    var currentItem =
+      contents[currentNumber - 1].className.split(" ")[
+        contents[currentNumber - 1].className.split(" ").length - 1
+      ];
+    var prevItem =
+      contents[currentNumber - 2].className.split(" ")[
+        contents[currentNumber - 2].className.split(" ").length - 1
+      ];
+    $(`.${currentItem}`).hide();
+    $(`.${prevItem}`).show();
+    currentNumber -= 1;
   }
 
-  if (currentNumber === 4) {
-    $(".next-button").hide();
-    return;
-  } else {
-    $(".next-button").show();
-  }
-
+  // 다음 버튼
   if (type === "next") {
+    if (currentNumber === 4) return;
     var currentItem =
       contents[currentNumber - 1].className.split(" ")[
         contents[currentNumber - 1].className.split(" ").length - 1
@@ -85,17 +89,20 @@ $(".news-event-button").on("click", function (event) {
       contents[currentNumber].className.split(" ")[
         contents[currentNumber].className.split(" ").length - 1
       ];
-
-    console.log(currentItem, nextItem);
-
-    $(`${currentItem}`).hide();
-    $(`${nextItem}`).show();
+    $(`.${currentItem}`).hide();
+    $(`.${nextItem}`).show();
     currentNumber += 1;
   }
 
-  if (type === "prev") {
-    // contents[currentNumber].hide();
-    // contents[currentNumber - 1].show();
-    // currentNumber -= 1;
+  // 내용 위치에 따른 버튼 존재 유무
+  if (currentNumber === 1) {
+    $(".prev-button").hide();
+  } else {
+    $(".prev-button").show();
+  }
+  if (currentNumber === 4) {
+    $(".next-button").hide();
+  } else {
+    $(".next-button").show();
   }
 });

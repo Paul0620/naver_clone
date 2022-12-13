@@ -55,6 +55,10 @@
   color: transparent;
 }
 
+.search-input:-ms-input-placeholder {
+  color: transparent;
+}
+
 .search-button {
   background-color: #19ce60;
   cursor: pointer;
@@ -244,6 +248,12 @@
 }
 
 .fixed-header .search-input::placeholder {
+  color: grey;
+  opacity: 0.3;
+  font-weight: 400;
+}
+
+.fixed-header .search-input:-ms-input-placeholder {
   color: grey;
   opacity: 0.3;
   font-weight: 400;
